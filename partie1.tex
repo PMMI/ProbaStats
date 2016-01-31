@@ -58,4 +58,27 @@
     \begin{proposition}
       Le cardinal de $A$ vaut:
       \[\#A = \sum_{\omega\in \Omega} 1_A(\omega)\]
+
+      Cette somme est indépendante de la manière de numéroter l'ensemble.
     \end{proposition}
+
+    \begin{proposition}
+      \begin{itemize}
+        \item \[1_{A^C} = 1-1_A\]
+        \item Si $A\cap B = \emptyset$, alors
+              \[1_{A\cup B} = 1_A + 1_B\]
+        \item Plus généralement:
+              \[1_{A\cup B} = 1_A + 1_B - 1_{A\cap B}\]
+        \item \[1_{A\cap B} = 1_A \times 1_B\]
+        \item \[1_{A\times B}(x,y) = 1_A(x)\times 1_B(y)\]
+      \end{itemize}
+    \end{proposition}
+
+    \begin{corollaire}
+      \begin{itemize}
+        \item \[\#A^C = \#\Omega - \#A\]
+        \item \[
+          \#(A\cup B) = \#A + \#B - \#(A\cap B)
+        \]
+      \end{itemize}
+    \end{corollaire}
