@@ -1,0 +1,24 @@
+\section{Exercices d'exemple}
+  \subsection{$\sum_{p=0}^n \binom{n}{p}$}
+    C'est l'ensemble des parties de $\llbracket 1,n\rrbracket$. Donc:
+    \[
+      \sum_{p=0}^n \binom{n}{p} = 2^n
+    \]
+
+  \subsection{Binôme de Newton}
+  On cherche à montrer que \[
+    (a+b)^n = \sum_{p=0}^n \binom{n}{p}a^pb^{n-p}
+  \]
+
+  On a:
+  \begin{eqnarray*}
+    (a+b)^n &=& (a+b)\times(a+b)\times(a+b)\dots\\
+            &=& \sum_{(\epsilon_1,\dots,\epsilon_n)\in\{0,1\}^n} a^{\epsilon_1} b^{1-\epsilon_1}\times\dots\times a^{\epsilon_n} b^{1-\epsilon_n}\\
+            &=& \sum_{(\epsilon_1,\dots,\epsilon_n)\in\{0,1\}^n} a^{\epsilon_1+\dots+\epsilon_n} b^{n-(\epsilon_1+\dots+\epsilon_n)}\\
+            &=& \sum_{p=0}^n \binom{n}{p} a^p b^{n-p}
+  \end{eqnarray*}
+
+
+  \subsection{$\sum_{p=0}^k\binom{n}{p}\binom{m}{k-p} = \binom{n+m}{k}$}
+    $n$,$m$ fixés, $k\in\llbracket 0, m+n\rrbracket$.
+    FUUUUUUUUU
