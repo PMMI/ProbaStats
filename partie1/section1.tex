@@ -1,0 +1,93 @@
+\section{Cardinal d'un esnemble fini}
+$\Omega$ un ensemble fini, $A\subset\Omega$.
+\begin{definition}
+  La fonction indicatrice de A est la fonction notée $1_A$, $\chi_A$ ou
+  $\mathbb{1}_A$ telle que:
+  \begin{eqnarray*}
+    1_A : \Omega &\rightarrow& \{0, 1\}\\
+          \omega &\mapsto& \begin{cases}
+                          1, \omega\in A\\
+                          0, \omega\notin A
+                        \end{cases}
+  \end{eqnarray*}
+\end{definition}
+
+\begin{proposition}
+  Deux sous ensembles $A$ et $B$ de $\Omega$ ont le même cardinal s'il existe
+  une bijection entre $A$ et $B$.
+
+  \[\# A = \# B \iff \forall x \in A, \exists ! y \in B, \exists f\in B^A | f(x)=y\]
+  %Peut-être pas une bijection...
+
+\end{proposition}
+
+\subsection{Propriété des fonctions indicatrices}
+\label{sub:Propriété des fonctions indicatrices}
+  \begin{definition}
+    Le complémentaire de $A$ dans $\Omega$ est l'ensemble des points des
+    points de $\Omega$ qui ne sont pas dans $A$.
+
+    \[A^C = ^CA = \Omega\backslash A = \{\omega\in\Omega, \omega\notin A\}
+                                     = \{\omega\in\Omega|1_A(\omega)=0\}
+    \]
+
+  \end{definition}
+
+  Une partie et son complémentaire forment une partition de $\Omega$.
+
+  \begin{definition}
+    On dit que $\left(A_i\right)_{i\in\llbracket 1,k\rrbracket} \in \mathcal{P}(\Omega)^k$
+    est une partition de $\Omega$ si
+    \begin{eqnarray*}
+      \bigcup_{i=1}^k A_i = \Omega \text{ et } \forall i\neq j, A_i\cap A_j = \emptyset
+    \end{eqnarray*}
+  \end{definition}
+
+  \begin{definition}
+    Il existe $n\in\mathbb{N}$ tel que $A$ est en bijection avec $\llbracket 1,n \rrbracket$.
+    Cet entier $n$ est unique et on l'appelle le cardinal de $A$.
+    Noté : $\#A$ .%ou $\card A$
+  \end{definition}
+
+  Cela signifie qu'il est possible de numéroter les éléments de $A$ par $\{a_1, \dots, a_n\}$,
+  et $A$ est par exemple donné par:
+  \[ k \in \llbracket 1, n \rrbracket \mapsto a_k \in A\]
+
+  \begin{proposition}
+    Le cardinal de $A$ vaut:
+    \[\#A = \sum_{\omega\in \Omega} 1_A(\omega)\]
+
+    Cette somme est indépendante de la manière de numéroter l'ensemble.
+  \end{proposition}
+
+  \begin{proposition}
+    \begin{itemize}
+      \item \[1_{A^C} = 1-1_A\]
+      \item Si $A\cap B = \emptyset$, alors
+            \[1_{A\cup B} = 1_A + 1_B\]
+      \item Plus généralement:
+            \[1_{A\cup B} = 1_A + 1_B - 1_{A\cap B}\]
+      \item \[1_{A\cap B} = 1_A \times 1_B\]
+      \item \[1_{A\times B}(x,y) = 1_A(x)\times 1_B(y)\]
+    \end{itemize}
+  \end{proposition}
+
+  \begin{corollaire}
+    \begin{itemize}
+      \item \[\#A^C = \#\Omega - \#A\]
+      \item \[
+        \#(A\cup B) = \#A + \#B - \#(A\cap B)
+      \]
+    \end{itemize}
+  \end{corollaire}
+
+  \begin{preuve}
+    Soit $\omega\in\Omega$.\\
+    Si $\omega\in A$ alors $1_{A^C}(\omega)=0$ et $1-1_{A^C}(\omega) = 1 = 1_A(\omega)$.\\
+    Si $\omega\notin A$, alors $\omega\in A^C$ et la démonstration est identique.\\
+    Les deux fonctions $1_A$ et $1-1_A$ sont donc égales sur $\Omega$ et on a égalité.\\
+
+    Trivialités. \'A recopier qd le temps sera présent.
+
+
+  \end{preuve}
