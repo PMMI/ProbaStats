@@ -45,4 +45,42 @@
         \mathfrak{S}_n = \{(x_1\, \dots\, x_n), x_i\in\llbracket 1,n\rrbracket, i\neq j \iff x_i\neq x_j\}\\
         \#\mathfrak{S}_n = n!
       \]
+
+      \item[Ensemble des arrangements de $p$ éléments de $\llbracket 1,n \rrbracket$]
+      Les arrangemetns sont une façon de ranger $p<n$ éléments de $\llbracket 1,n \rrbracket$.
+
+      C'est aussi une injection de $\llbracket 1,p\rrbracket$ dans $\llbracket 1,n\rrbracket$.
+
+      \begin{remarque}
+        Un arrangement n'est pas surjectif car $\exists j_0 | \forall i, f(i)\neq j_0$.
+      \end{remarque}
+
+      Il y a $A^p_n = \frac{n!}{(n-p)!}$ éléments.
+
+      \begin{preuve}
+        Principe des choix successifs.
+      \end{preuve}
+
+      \item[Ensemble des parties de $p$ éléments de $\llbracket 1,n\rrbracket$]
+      Avec une partie de $p$ éléments on peut construre $p!$ arrangements.
+      On a donc $p!$ fois moins de parties que d'arrangements. Il y a donc \[
+        C^p_n = \binom{n}{p} = \frac{n!}{p!(n-p)!}
+      \]
+      parties de $p$ éléments de $\llbracket 1,n \rrbracket$.
+
+      On peut aussi démontrer par récurrence, mais on en a pas trop envie.
+
+      \begin{remarque}
+        $\binom{n}{p}$ est aussi le nombre de solutions de l'équation suivante:
+        \[\left\{
+        \begin{array}{r c l}
+          \epsilon_i \in\{0,1\}&,& 1\leq i \leq n\\
+          \sum_{i=1}^n \epsilon_i &=& p
+        \end{array}
+        \right.
+        \]
+
+        En effet, $\mathcal{P}(\llbracket 1,n \rrbracket)$ est en bijection
+        avec $\{0,1\}^n$.
+       \end{remarque}
   \end{description}
