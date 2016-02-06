@@ -1,0 +1,19 @@
+\section{Indépendance et probabilités conditionnelles}
+  \subsection{Indépendance}
+    \begin{definition}[Indépendance de deux évènements]
+      Soit $(\Omega, \PP)$ un espace de probabilités, $A$,$B$, deux évènements.
+
+      On dit que $A$ et $B$ sont indépendants si: \[
+        \PP(A\cap B) = \PP(A)\times\PP(B)
+      \]
+    \end{definition}
+
+    \begin{definition}[Indépendance de $n$ évènements]
+      Soit $\parenthesis{A_i}_{1\leq i \leq n}$ une famille d'évènements de
+      $\Omega$.
+
+      On dit que $\parenthesis{A_i}_{1\leq i \leq n}$ sont indépendants si: \[
+        \forall P \in \mathcal{P}(\Ninterval{1,n}), \PP\parenthesis{\bigcap_{i\in P}A_i} = \prod_{i\in P}\PP(A_i)
+      \]
+
+    \end{definition}
