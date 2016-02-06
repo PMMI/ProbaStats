@@ -1,0 +1,108 @@
+\section{Définitions}
+
+  \subsection{L'univers}
+
+  \begin{definition}[L'univers $\Omega$]
+    C'est un ensemble qui rassemble toutes les informations liés à une expérience
+    aléatoire donnée.
+
+    On a: $\Omega\neq\emptyset$.
+
+  \end{definition}
+
+    \begin{exemple}
+      On jette un dé à six faces.
+
+      On peut prendre $\Omega = \rdbrackets{1,2,3,4,5,6} = \rdbrackets{\text{numéros de la face}}$.
+      $\Omega$ n'est cependant pas unique.
+    \end{exemple}
+
+ %% Fin du cours 2 ??????????????????????????????????
+
+    Grilles de loto, peut être gros, position d'une particule suivant un mouvement
+    brownien ($\Omega = (\RR^3)^\RR, \#\Omega = \aleph_2$).
+
+    Cadre du cours : $\#\Omega = k \in \NN$. \'Etude des probabilités discrètes.
+
+  \begin{definition}[Les évènements]
+    Ce sont les \emph{parties} ou \emph{sous-ensembles} de $\Omega$.
+    \[
+      \mathcal{P}(\Omega) = \rdbrackets{\text{l'ensemble des évènements de $\Omega$}}
+    \]
+
+    Deux évènements sont dits incompatibles si leurs ensembles associés sont
+    disjoints.
+
+  \end{definition}
+
+  \begin{definition}[Partition de $\Omega$]
+    C.f. \ref{partiton}.
+  \end{definition}
+
+  \subsection{Probabilité}
+  Pour $\Omega$ fini, $\omega \in \Omega$, on peut noter la fréquence d'apparition
+  de $\omega$.
+
+  \begin{definition}[Germe de probabilité]
+    On appelle \emph{germe de probabilité}, défini sur $\Omega$ (fini), une
+    application: \[
+        p : \Omega \rightarrow [0,1] | \sum_{\omega\in\Omega} p(\omega) = 1
+    \]
+  \end{definition}
+
+  Autrement dit: \begin{eqnarray*}
+    \forall \omega \in \Omega, 0 \leq p(\omega) \leq 1\\
+    \sum_{\omega\in\Omega} p(\omega) = 1 = \sum_{i=1}^{\#\Omega} p(\omega_i)
+  \end{eqnarray*}
+
+
+  \begin{definition}
+    La probabilité $\PP$ associée au germe de probabilité $p$ défini sur $\Omega$
+    est l'application: \begin{eqnarray*}
+      \PP : \mathcal{P}(\Omega) &\rightarrow& [0,1]\\
+                     E         &\mapsto& \sum_{\omega\in E} p(\omega)
+  \end{eqnarray*}
+  \end{definition}
+
+  \begin{remarque}
+    \[
+      \PP(\Omega) = 1
+    \]
+  \end{remarque}
+
+  \begin{remarque}
+    On a:
+    \[
+      \PP(E) = \sum_{\omega\in\Omega} \indic_E(\omega) p(\omega)
+    \]
+  \end{remarque}
+
+  \begin{proposition}
+    $A, B \in \mathcal{P}(\Omega)$, alors:
+    \[\PP(A\cup B) = \PP(A) + \PP(B) - \PP(A\cap B)\]
+    \[\PP(A^C) = 1 - \PP(A)\]
+  \end{proposition}
+
+  \begin{remarque}
+    La proposition caractérise $\PP$ et $p$, i.e. si $\PP$ vérifie la proposition
+    alors on sait définir le germe $p$ par:
+    \[
+      p(\omega) = \PP[\{\omega\}]
+    \]
+    et $\PP$ est unique.
+  \end{remarque}
+
+  \subsection{Espaces de probabilités}
+    C'est la donnée d'un espace de probabilités $(\PP, \Omega)$ ou $(p,\Omega)$.
+
+    \begin{definition}[Probabilité uniforme]
+      Une \emph{probabilité uniforme} est la probabilité définie par le germe
+      constant: \[
+        \forall \omega \in \Omega, p(\omega) = \varpi,
+        \sum_{\omega\in\Omega} p(\omega) = \#\Omega \times \varpi = 1 \iff \varpi = \frac{1}{\#\Omega}
+      \]
+    \end{definition}
+
+    Dans le cas où la probabilité définie est uniforme, alors: \[
+      \forall A\in\mathcal{P}(\Omega), \PP(A) = \frac{\#A}{\#\Omega}
+    \]
