@@ -1,0 +1,32 @@
+\section{Probabilités produit}
+  Problème : on a deux espaces de probabilité, par exemple
+  $(\Omega_1, \PP_1)$ et $(\Omega_2, \PP_2)$ pour deux lois différentes.
+
+  \begin{definition}
+    On se donne deux espaces $(\Omega_1, \PP_1)$ et $(\Omega_2, \PP_2)$.
+    $\PP_{\left|{1\atop 2}\right.}$ est associée au germe
+    $p_{\left|{1\atop 2}\right.}$ sur $\Omega_1\times\Omega_2$ défini par: \[
+      p_{\left|{1\atop 2}\right.}(\omega_1,\omega_2)=p_1(\omega_1)\times p_2(\omega_2)
+    \]
+
+    L'espace $(\Omega, \PP_{\left|{1\atop 2}\right.})$ où
+    $\PP_{\left|{1\atop 2}\right.}$ associée à $p_{\left|{1\atop 2}\right.}$
+    s'appelle l'\emph{espace probabilité produit}.
+
+    $\PP_{\left|{1\atop 2}\right.}$ s'appelle la probabilité produit de $\PP_1$ et de $\PP_2$
+  \end{definition}
+
+  \begin{preuve}
+    Montrons que $p_{\left|{1\atop 2}\right.}$ est un germe de probabilités.
+
+    \begin{itemize}
+      \item $\forall (\omega_1,\omega_2) \in \Omega_1\times\Omega_2,
+             p_1(\omega_1) \in [0,1] \wedge p_2(\omega_2) \in [0,1]
+             \implies p_{\left|{1\atop 2}\right.}(\omega_1,\omega_2)
+             =p_1(\omega_1)\times p_2(\omega_2) \in [0,1]$
+
+      \item $\sum_{\omega\in\Omega} p_{\left|{1\atop 2}\right.}(\omega)
+            =\parenthesis{\sum_{\omega_1\in\Omega_1}p_1(\omega_1)}\times
+             \parenthesis{\sum_{\omega_2\in\Omega_2}p_2(\omega_2)} = 1\times 1 = 1$
+    \end{itemize}
+  \end{preuve}
