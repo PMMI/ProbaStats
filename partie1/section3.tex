@@ -20,5 +20,13 @@
 
 
   \subsection{$\sum_{p=0}^k\binom{n}{p}\binom{m}{k-p} = \binom{n+m}{k}$}
-    $n$,$m$ fixés, $k\in\llbracket 0, m+n\rrbracket$.
-    FUUUUUUUUU
+    $n$,$m$ fixés, $k\in\Ninterval{0, m+n}$.\\
+    $\binom{m+n}{k}$ est le nombre de solutions
+    $\parenthesis{\epsilon_1, \dots, \epsilon_{m+n}} \in \{0,1\}^{n+m}$.\\
+    \[k = \sum_{i=1}^{n+m}\epsilon_i = \sum_{i=1}^{n}\epsilon_i + \sum_{i=n+1}^{n+m}\epsilon_i\]
+    Or, il y a $\binom{n}{p}$ solutions à $\sum_{i=1}^{n}\epsilon_i = p$
+    et $\binom{m}{k-p}$ solutions à $\sum_{i=n+1}^{n+m}\epsilon_i = k-p$.
+    On a donc :
+    \[
+      \binom{n+m}{k} = \sum_{p=0}^k\binom{n}{p}\binom{m}{k-p}
+    \]
